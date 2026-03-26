@@ -11,7 +11,7 @@ func main() {
 	if x == 2 {
 		fmt.Println("f(x) = Indeterminado")
 	} else {
-		fmt.Printf("f(x) = %f", 8/(2-x))
+		fmt.Printf("f(x) = %f\n", 8/(2-x))
 
 	}
 
