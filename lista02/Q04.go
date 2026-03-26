@@ -10,9 +10,9 @@ func main() {
 
 	if n >= 0 {
 		raiz = math.Pow(n, 0.5)
-		fmt.Printf("A raíz do número é %f", raiz)
+		fmt.Printf("A raíz do número é %f\n", raiz)
 	} else {
 		quadrado = math.Pow(n, 2)
-		fmt.Printf("O quadrado do número é %f", quadrado)
+		fmt.Printf("O quadrado do número é %f\n", quadrado)
 	}
 }
