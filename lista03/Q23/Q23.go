@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 func main() {
-
-	n, soma, transformador := 0, 0, 0
+	n, resultado := 0, 0.0
 	sequencia := []int{1000}
 
 	fmt.Scan(&n)
@@ -14,24 +13,17 @@ func main() {
 	}
 
 	for i := 1; i <= n-1; i++ {
-
-		transformador = sequencia[i-1]
-
-		if sequencia[i-1] < 0 {
-
-			transformador = -transformador
-
-		}
-
-		soma = transformador - 3
-
-		if i%2 != 0 {
-			soma = -soma
-		}
-
+		soma := sequencia[i-1] - 3
 		sequencia = append(sequencia, soma)
-
 	}
-	fmt.Println(sequencia)
 
+	for i := 0; i <= n-1; i++ {
+		termo := float64(sequencia[i]) / float64(i+1)
+		if i%2 != 0 {
+			termo = -termo
+		}
+		resultado += termo
+	}
+
+	fmt.Println(resultado)
 }
