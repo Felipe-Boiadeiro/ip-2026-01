@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -15,5 +16,8 @@ func main() {
 		cosseno += termo
 	}
 
+	diferenca := cosseno - math.Cos(x)
+
 	fmt.Println(cosseno)
+	fmt.Println(diferenca)
 }
