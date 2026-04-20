@@ -6,18 +6,19 @@ import (
 )
 
 func main() {
-
-	n := .0
+	sequencia := []int{}
+	n, resultado := 0, 0
 	fmt.Scan(&n)
 
-	sequencia := []int{}
-
-	for i := 1; i <= n; i++ {
-
-		x := i
-		if n%math.Pow(10, float64(x)) != 0 {
-			sequencia = append(sequencia, int(n%10))
-		}
+	for n > 0 {
+		digito := n % 10
+		sequencia = append(sequencia, digito)
+		n = n / 10
 	}
 
+	for i := range sequencia {
+		resultado += int(math.Pow(float64(8), float64(i))) * sequencia[i]
+	}
+
+	fmt.Println(resultado)
 }
