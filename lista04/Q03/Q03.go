@@ -2,34 +2,26 @@ package main
 
 import "fmt"
 
+func inverter(arr []int) []int {
+	inverso := make([]int, len(arr))
+	for i := range arr {
+		inverso[i] = arr[len(arr)-1-i]
+	}
+	return inverso
+}
+
 func main() {
-	vetor := []int{}
-	soma := 0
-	pares := []int{}
-	impares := []int{}
-	contador := 0
+	n := 0
+	fmt.Print("Digite a quantidade de elementos: ")
+	fmt.Scan(&n)
 
-	for i := 1; i <= 10; i++ {
-		n := 0
-		fmt.Printf("Informe o vetor %d: ", i)
-		fmt.Scan(&n)
+	vetor := make([]int, n)
 
-		vetor = append(vetor, n)
+	fmt.Println("Digite os elementos:")
+	for i := 0; i < n; i++ {
+		fmt.Scan(&vetor[i])
 	}
-	for i := range vetor {
-		if vetor[i]%2 == 0 {
-			pares = append(pares, vetor[i])
-			soma += vetor[i]
 
-		} else {
-			impares = append(impares, vetor[i])
-			contador++
+	fmt.Println(inverter(vetor))
 
-		}
-
-	}
-	fmt.Println(pares)
-	fmt.Println(soma)
-	fmt.Println(impares)
-	fmt.Println(contador)
 }
