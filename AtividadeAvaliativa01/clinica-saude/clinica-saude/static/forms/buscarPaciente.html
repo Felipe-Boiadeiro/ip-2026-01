@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Paciente</title>
+  <link rel="stylesheet" href="/static/styles/form.style.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header blue">
+      <span>🔍</span>
+      <h1>Buscar Paciente</h1>
+    </div>
+
+    <form action="/api/buscar" method="POST">
+      <div class="form-group">
+        <label for="cpf">CPF do Paciente *</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+        <small>Digite o CPF para localizar o paciente no sistema.</small>
+      </div>
+
+      <div class="form-actions">
+        <a href="/" class="btn-secondary">Cancelar</a>
+        <button type="submit" class="btn-primary blue">Buscar Paciente</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

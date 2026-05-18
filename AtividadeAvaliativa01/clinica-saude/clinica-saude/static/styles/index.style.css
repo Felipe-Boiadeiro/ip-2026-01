@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(135deg, #1a6b3c, #28a745);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-top: 0.3rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.card.green  { background: linear-gradient(135deg, #1a6b3c, #28a745); }
+.card.blue   { background: linear-gradient(135deg, #0d4fa8, #1976d2); }
+.card.yellow { background: linear-gradient(135deg, #b8860b, #f0a500); }
+.card.red    { background: linear-gradient(135deg, #8b0000, #c0392b); }
+
+footer {
+  background: #2d3748;
+  color: #a0aec0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .cards { grid-template-columns: 1fr; }
+}

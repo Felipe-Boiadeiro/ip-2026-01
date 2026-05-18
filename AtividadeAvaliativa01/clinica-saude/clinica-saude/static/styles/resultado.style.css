@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  border-top: 5px solid #ccc;
+}
+
+.card.success { border-top-color: #28a745; }
+.card.info    { border-top-color: #1976d2; }
+.card.danger  { border-top-color: #c0392b; }
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.card p:last-of-type {
+  border-bottom: none;
+}
+
+.card p strong {
+  color: #2d3748;
+  min-width: 160px;
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.65rem 1.6rem;
+  background: linear-gradient(135deg, #1a6b3c, #28a745);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.88; }
